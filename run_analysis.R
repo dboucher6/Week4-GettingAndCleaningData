@@ -38,6 +38,6 @@ run_analysis <- function () {
 
   melted <- melt(condense, id=c("subject", "Activity"), measure.vars=c(3:81))
   reform <- dcast(melted, subject + Activity ~ variable, mean)
-  write.table(reform, "tidydata.txt")
+  write.table(reform, "tidydata.txt", row.names=FALSE)
     }
 
